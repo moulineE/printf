@@ -1,6 +1,10 @@
 #include "main.h"
-#include <stdlib.h>
-#include <stdarg.h>
+/**
+ * _printf - produces output according to printf format
+ * @format: the string to print
+ *
+ * Return: the number of characters printed
+ */
 int _printf(const char *format, ...)
 {
 	int i;
@@ -16,7 +20,7 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			sp = format[i + 1];
-			tempr = get-func(sp)(ap);
+			tempr = getfunc(sp)(ap);
 			if (tempr == NULL)
 			{
 				_purchar(format[i]);
