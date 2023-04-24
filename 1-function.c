@@ -9,10 +9,10 @@ int putdigit(va_list ap)
 {
 	int n, num, i, exp;
 	int last, digit;
-	
+
 	i = 1;
 	exp = 1;
-	n = va_arg(ap, int);	
+	n = va_arg(ap, int);
 	last = n % 10;
 	n = n / 10;
 	num = n;
@@ -45,6 +45,6 @@ int putdigit(va_list ap)
 		}
 	}
 	_putchar(last + '0');
-	
+
 	return (i);
 }
