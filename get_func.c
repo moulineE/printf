@@ -2,6 +2,7 @@
 /**
  * getfunc - function that selects the correct function to convert tge format
  * @sp: the specifier used to specify the correct format
+ * @ap: the list of argument
  *
  * Return: the correct fonction
  */
