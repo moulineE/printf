@@ -1,4 +1,7 @@
 #include "main.h"
+
+int putform(char a, char b);
+
 /**
  * _printf - produces output according to printf format
  * @format: the string to print
@@ -7,7 +10,7 @@
  */
 int _printf(const char *format, ...)
 {
-	int i, tempr, r = 0;
+	int i = 0, tempr, r = 0;
 	char sp[2] = {'\0', '\0'};
 	va_list ap;
 
@@ -16,21 +19,20 @@ int _printf(const char *format, ...)
 	{
 		return (-1);
 	}
-	for (i = 0; format[i] != '\0'; i++)
+	while (format[i] != '\0')
 	{
 		tempr = 0;
 		if (format[i] == '%')
 		{
 			sp[0] = format[i + 1];
-			if ((sp[0] == '\0' || sp[0] == 32) && (format[i - 1] != '%' || i == 0))
+			if ((sp[0] == '\0' || sp[0] == 32))
 			{
 				return (-1);
 			}
 			tempr = getfunc(sp, ap);
 			if (tempr == 0 && sp[0] != 32)
 			{
-				_putchar(format[i]);
-				_putchar(format[i + 1]);
+				putform(format[i], format[i + 1]);
 				r = r + 2;
 			}
 			else
@@ -39,12 +41,26 @@ int _printf(const char *format, ...)
 			}
 			i = i + 2;
 		}
-		if (format[i] != '\0')
+		if (format[i] != '\0' && format[i] != '%')
 		{
 			_putchar(format[i]);
 			r++;
+			i++;
 		}
 	}
 	va_end(ap);
 	return (r);
+}
+/**
+ * putform - puts forme[i] and forme [i + 1]
+ * @a: the 1st forme char
+ * @b: the second form char
+ *
+ * Return: 0 success
+ */
+int putform(char a, char b)
+{
+	_putchar(a);
+	_putchar(b);
+	return (0);
 }
