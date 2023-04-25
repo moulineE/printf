@@ -19,6 +19,10 @@ int _printf(const char *format, ...)
 		tempr = 0;
 		if (format[i] == '%')
 		{
+			if ((format[i + 1] == 0) && (format[i - 1] != '%' || i == 0))
+			{
+				return (-1);
+			}
 			sp[0] = format[i + 1];
 			tempr = getfunc(sp, ap);
 			if (tempr == 0)
@@ -33,8 +37,11 @@ int _printf(const char *format, ...)
 			}
 			i = i + 2;
 		}
-		_putchar(format[i]);
-		r++;
+		if (format[i] != '\0')
+		{
+			_putchar(format[i]);
+			r++;
+		}
 	}
 	va_end(ap);
 	return (r);
