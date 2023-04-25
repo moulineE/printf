@@ -87,7 +87,7 @@ int putint(va_list ap)
 		{
 			digit = num / exp;
 			_putchar(digit + '0');
-			num = num - (digit * exp);
+			num = num - (digit * exp); // the same as 'exp = exp / 10'
 			exp = exp / 10;
 			i++;
 		}
