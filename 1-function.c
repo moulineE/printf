@@ -36,7 +36,7 @@ int putdigit(va_list ap)
 		while (num / 10 != 0)
 		{
 			exp = exp * 10;
-			num = num % 10;
+			num = num / 10;
 		}
 		num = n;
 
@@ -44,7 +44,7 @@ int putdigit(va_list ap)
 		{
 			digit = num / exp;
 			_putchar(digit + '0');
-			num = digit % exp;
+			num = num - (digit * exp);
 			exp = exp / 10;
 			i++;
 		}
