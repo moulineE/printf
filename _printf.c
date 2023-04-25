@@ -10,7 +10,7 @@ int _printf(const char *format, ...)
 	int i;
 	int r = 0;
 	int tempr;
-	char sp;
+	char sp[2] = {'\0', '\0'};
 	va_list ap;
 
 	va_start(ap, format);
@@ -19,11 +19,11 @@ int _printf(const char *format, ...)
 		tempr = 0;
 		if (format[i] == '%')
 		{
-			sp = format[i + 1];
-			tempr = getfunc(sp)(ap);
-			if (tempr == NULL)
+			sp[0] = format[i + 1];
+			tempr = getfunc(sp, ap);
+			if (tempr == 0)
 			{
-				_purchar(format[i]);
+				_putchar(format[i]);
 				_putchar(format[i + 1]);
 				r = r + 2;
 			}

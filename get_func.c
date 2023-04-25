@@ -5,7 +5,7 @@
  *
  * Return: the correct fonction
  */
-int (*getfunc(char *sp))(va_list)
+int getfunc(char *sp, va_list ap)
 {
 	sp_t ssp[] = {
 	{"d", putdigit},
@@ -21,9 +21,9 @@ int (*getfunc(char *sp))(va_list)
 	{
 		if (*(ssp[i].sp) == *sp)
 		{
-			return (ssp[i].f);
+			return (ssp[i].f(ap));
 		}
 		i++;
 	}
-	return (ssp[i].f);
+	return (0);
 }

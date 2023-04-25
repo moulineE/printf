@@ -3,6 +3,7 @@
 int printchar(va_list ap);
 int _strlen(char *s);
 int printf_string(va_list ap);
+int _putchar(char c);
 
 /**
  * printchar - prints a char.
@@ -50,4 +51,16 @@ int printf_string(va_list ap)
 			_putchar(s[i]);
 	}
 	return (len);
+}
+
+/**
+ * _putchar - writes the character c to stdout
+ * @c: The character to print
+ *
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
+ */
+int _putchar(char c)
+{
+	return (write(1, &c, 1));
 }

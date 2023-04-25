@@ -2,6 +2,8 @@
 
 int putdigit(va_list ap);
 int putint(va_list ap);
+int put2sp(void);
+
 /**
  * putdigit - printf decimal
  * @ap: list of arguments
@@ -22,7 +24,7 @@ int putdigit(va_list ap)
 
 	if (last < 0)
 	{
-		_pucthar('-');
+		_putchar('-');
 		num = -num;
 		n = -n;
 		last = -last;
@@ -52,7 +54,6 @@ int putdigit(va_list ap)
 	return (i);
 }
 
-#include "main.h"
 /**
  * putint - prints integer
  * @ap: argument to print
@@ -98,4 +99,14 @@ int putint(va_list ap)
 	_putchar(last + '0');
 
 	return (i);
+}
+
+/**
+ * put2sp - prints the char 37.
+ * Return: 1.
+ */
+int put2sp(void)
+{
+	_putchar(37);
+	return (1);
 }

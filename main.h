@@ -13,14 +13,17 @@
 typedef struct sp
 {
 	char *sp;
-	int (*f)(char *a);
+	int (*f)();
 } sp_t;
 
+int _printf(const char *format, ...);
+int _putchar(char c);
 int putdigit(va_list ap);
 int putint(va_list ap);
 int printchar(va_list ap);
 int _strlen(char *s);
 int printf_string(va_list ap);
-int (*getfunc(char *sp))(va_list);
+int getfunc(char *sp, va_list ap);
+int put2sp(void);
 
 #endif
