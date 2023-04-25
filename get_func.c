@@ -5,19 +5,19 @@
  *
  * Return: the correct fonction
  */
-int (*getfunc(char *sp)(va_list))
+int (*getfunc(char *sp))(va_list)
 {
 	sp_t ssp[] = {
 	{"d", putdigit},
-	{"i", temp},
-	{"c", temp},
-	{"s", temp},
-	{"%", temp},
+	{"i", putint},
+	{"c", printchar},
+	{"s", printf_string},
+	{"%", put2sp},
 	{NULL, NULL},
 	};
 	int i = 0;
-	
-	while (ops[i].op != NULL)
+
+	while (ssp[i].sp != NULL)
 	{
 		if (*(ssp[i].sp) == *sp)
 		{

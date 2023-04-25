@@ -1,4 +1,7 @@
 #include"main.h"
+
+int putdigit(va_list ap);
+int putint(va_list ap);
 /**
  * putdigit - printf decimal
  * @ap: list of arguments

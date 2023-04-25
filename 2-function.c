@@ -1,4 +1,9 @@
 #include"main.h"
+
+int printchar(va_list ap);
+int _strlen(char *s);
+int printf_string(va_list ap);
+
 /**
  * printchar - prints a char.
  * @ap: list of arguments

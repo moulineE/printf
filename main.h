@@ -7,7 +7,7 @@
 /**
  * struct sp - Struct sp
  *
- * @op: The specifier
+ * @sp: The specifier
  * @f: The function associated
  */
 typedef struct sp
@@ -18,6 +18,9 @@ typedef struct sp
 
 int putdigit(va_list ap);
 int putint(va_list ap);
+int printchar(va_list ap);
+int _strlen(char *s);
+int printf_string(va_list ap);
 int (*getfunc(char *sp))(va_list);
 
 #endif
