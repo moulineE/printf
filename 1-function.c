@@ -49,7 +49,7 @@ int putdigit(va_list ap)
 	return (i);
 }
 
-#include "holberton.h"
+#include "main.h"
 /**
  * putint - prints integer
  * @ap: argument to print
