@@ -29,11 +29,15 @@ int _printf(const char *format, ...)
 			}
 			sp[0] = format[i + 1];
 			tempr = getfunc(sp, ap);
-			if (tempr == 0)
+			if (tempr == 0 && sp[0] != 32)
 			{
 				_putchar(format[i]);
 				_putchar(format[i + 1]);
 				r = r + 2;
+			}
+			else if (sp[0] == 32)
+			{
+				return (-1);
 			}
 			else
 			{
