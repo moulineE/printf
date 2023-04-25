@@ -28,7 +28,7 @@ int _strlen(char *s)
 }
 /**
  * printf_string - print a string.
- * @val: argumen t.
+ * @ap: argumen t.
  * Return: the length of the string.
  */
 int printf_string(va_list ap)
@@ -37,7 +37,7 @@ int printf_string(va_list ap)
 	int i, len;
 
 	s = va_arg(ap, char *);
-	
+
 	if (s != NULL)
 	{
 		len = _strlen(s);
@@ -45,5 +45,4 @@ int printf_string(va_list ap)
 			_putchar(s[i]);
 	}
 	return (len);
-	
 }
