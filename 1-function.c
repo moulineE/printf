@@ -1,8 +1,8 @@
 include"main.h"
 /**
- * putdigit - printf int
- *
- * Return: 0 success
+ * putdigit - printf decimal
+ * @ap: list of arguments
+ * Return: umber of characters printed
  */
 
 int putdigit(va_list ap)
