@@ -14,12 +14,16 @@ int _printf(const char *format, ...)
 	va_list ap;
 
 	va_start(ap, format);
+	if (format == NULL)
+	{
+		return (-1);
+	}
 	for (i = 0; format[i] != '\0'; i++)
 	{
 		tempr = 0;
 		if (format[i] == '%')
 		{
-			if ((format[i + 1] == 0) && (format[i - 1] != '%' || i == 0))
+			if ((format[i + 1] == '\0') && (format[i - 1] != '%' || i == 0))
 			{
 				return (-1);
 			}
