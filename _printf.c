@@ -48,6 +48,5 @@ int _printf(const char *format, ...)
 		}
 	}
 	va_end(ap);
-	_putchar('\0');
 	return (r);
 }
