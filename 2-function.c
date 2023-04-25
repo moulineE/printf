@@ -44,14 +44,23 @@ int printf_string(va_list ap)
 
 	s = va_arg(ap, char *);
 
-	if (s != NULL)
+	if (s == NULL)
+	{
+		s = "(null)";
+		len = _strlen(s);
+		for (i = 0; i < len; i++)
+		{
+			_putchar(s[i]);
+		}
+		return (len);
+	}
+	else
 	{
 		len = _strlen(s);
 		for (i = 0; i < len; i++)
 			_putchar(s[i]);
-
+		return (len);
 	}
-	return (len);
 }
 
 /**
