@@ -12,6 +12,7 @@ int (*getfunc(char *sp)(va_list))
 	{"i", temp},
 	{"c", temp},
 	{"s", temp},
+	{"%", temp},
 	{NULL, NULL},
 	};
 	int i = 0;
