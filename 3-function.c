@@ -9,17 +9,34 @@ int PrintBinary(va_list ap)
 {
 	int i;
 	unsigned int num = va_arg(ap, unsigned int);
-	char *str;
-	static char buffer[32];
+	char *str = convert(num, 2);
 
-	str = &buffer[32];
-	*str = '\0';
-	do {
-		*str-- = num %  2;
-		num = num / 2;
-
-	} while (num != 0);
 	for (i = 0; str[i] != '\0'; i++)
+	{
 		_putchar(str[i]);
+	}
 	return (i);
+}
+
+
+/**
+ * convert - converts number and base into string
+ * @num: input number
+ * @base: input base
+ * Return: result string
+ */
+char *convert(unsigned long int num, int base)
+{
+	static char buffer[32];
+	char *ptr;
+
+	ptr = &buffer[31];
+	*ptr = '\0';
+	do {
+		ptr--;
+		*ptr = num % base + '0';
+		num /= base;
+	} while (num != 0);
+
+	return (ptr);
 }
