@@ -18,6 +18,20 @@ int PrintBinary(va_list ap)
 	return (i);
 }
 
+/**
+ * PrintOctal - prints a number in base 8
+ * @ap: list of arguments
+ * Return: the number of char printed
+ */
+int PrintOctal(va_list ap)
+{
+	int i;
+	unsigned int num = va_arg(ap, unsigned int);
+	char *str = convert(num, 8);
+	for (i = 0; str[i] != '\0'; i++)
+		_putchar(str[i]);
+	return (i);
+}
 
 /**
  * convert - converts number and base into string
