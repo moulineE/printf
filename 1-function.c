@@ -107,6 +107,6 @@ int putint(va_list ap)
  */
 int put2sp(void)
 {
-	_putchar(37);
+	write(1, "%%", 1);
 	return (1);
 }

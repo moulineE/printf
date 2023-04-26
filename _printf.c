@@ -10,7 +10,7 @@ int putform(char a, char b);
  */
 int _printf(const char *format, ...)
 {
-	int i = 0, tempr, r = 0;
+	int i = 0, f, tempr, r = 0;
 	char sp[2] = {'\0', '\0'};
 	va_list ap;
 
@@ -22,8 +22,14 @@ int _printf(const char *format, ...)
 	while (format[i] != '\0')
 	{
 		tempr = 0;
+		f = 0;
 		if (format[i] == '%')
 		{
+			while (format[i + 1] == 32 && format[i] != '\0')
+			{
+				i++;
+				f++;
+			}
 			sp[0] = format[i + 1];
 			if ((sp[0] == '\0'))
 			{
