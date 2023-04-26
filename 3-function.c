@@ -34,6 +34,22 @@ int PrintOctal(va_list ap)
 }
 
 /**
+ * print_unsigned - prints an unsigned integer
+ * @ap: va_list of arguments from _printf
+ * Return: number of char printed
+ */
+int print_unsigned(va_list ap)
+{
+	int i;
+	unsigned int u = va_arg(ap, unsigned int);
+	char *str = convert(u, 10);
+	
+	for (i = 0; str[i] != 0; i++)
+		_putchar(str[i]);
+	return (i);
+}
+
+/**
  * convert - converts number and base into string
  * @num: input number
  * @base: input base
