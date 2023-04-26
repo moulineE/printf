@@ -64,7 +64,11 @@ int print_hex(va_list ap)
 		_putchar(str[i]);
 	return (i);
 }
-
+/**
+ * print_hex_big - prints a number in hexadecimal base,
+ * @ap: va_list arguments from _printf
+ * Return: the number of char printed
+ */
 int print_hex_big(va_list ap)
 {
 	int i;
