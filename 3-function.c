@@ -28,6 +28,7 @@ int PrintOctal(va_list ap)
 	int i;
 	unsigned int num = va_arg(ap, unsigned int);
 	char *str = convert(num, 8);
+
 	for (i = 0; str[i] != '\0'; i++)
 		_putchar(str[i]);
 	return (i);
@@ -43,8 +44,8 @@ int print_unsigned(va_list ap)
 	int i;
 	unsigned int u = va_arg(ap, unsigned int);
 	char *str = convert(u, 10);
-	
-	for (i = 0; str[i] != 0; i++)
+
+	for (i = 0; str[i] != '\0'; i++)
 		_putchar(str[i]);
 	return (i);
 }

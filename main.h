@@ -28,6 +28,7 @@ int put2sp(void);
 int PrintBinary(va_list ap);
 char *convert(unsigned long int num, int base);
 int PrintOctal(va_list ap);
+int print_unsigned(va_list ap);
 
 
 
