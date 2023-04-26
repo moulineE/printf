@@ -49,6 +49,43 @@ int print_unsigned(va_list ap)
 		_putchar(str[i]);
 	return (i);
 }
+/**
+ *
+ *
+ *
+ */
+int print_hex(va_list ap)
+{
+	int i;
+	unsigned int num = va_arg(ap, unsigned int);
+	char *str = convert_hex(num, 16, 1);
+
+	_putchar('0');
+	_putchar('x');
+	for (i = 0; str[i] != '\0'; i++)
+		_putchar(str[i]);
+	return (i);
+}
+char *convert_hex(unsigned long int num, int base, int l)
+{
+	static char *rep;
+	static char buffer[50];
+	char *ptr;
+
+	rep = (l)
+		? "0123456789abcdef"
+		: "0123456789ABCDEF";
+	ptr = &buffer[49];
+	*ptr = '\0';
+	do {
+		ptr--;
+		*ptr = rep[num % base];
+		num /= base;
+	} while (num != 0);
+
+	return (ptr);
+}
+
 
 /**
  * convert - converts number and base into string
