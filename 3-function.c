@@ -66,6 +66,17 @@ int print_hex(va_list ap)
 		_putchar(str[i]);
 	return (i);
 }
+
+int print_hex_big(va_list ap)
+{
+	unsigned int num = va_arg(ap, unsigned int);
+	char *str = convert_hex(num, 16, 0);
+	int i;
+
+	for (i = 0; str[i] != '\0'; i++)
+		_putchar(str[i]);
+	return (i);
+}
 /**
  * convert_hex - convert into string
  * @num: input number

@@ -17,6 +17,7 @@ int getfunc(char *sp, va_list ap)
 	{"b", PrintBinary},
 	{"o", PrintOctal},
 	{"u", print_unsigned},
+	{"x", print_hex},
 	{NULL, NULL},
 	};
 	int i = 0;
