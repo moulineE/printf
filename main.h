@@ -31,6 +31,7 @@ int PrintOctal(va_list ap);
 int print_unsigned(va_list ap);
 int print_hex(va_list ap);
 char *convert_hex(unsigned long int num, int base, int l);
+int print_hex_big(va_list ap);
 
 
 

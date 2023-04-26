@@ -60,8 +60,6 @@ int print_hex(va_list ap)
 	unsigned int num = va_arg(ap, unsigned int);
 	char *str = convert_hex(num, 16, 1);
 
-	_putchar('0');
-	_putchar('x');
 	for (i = 0; str[i] != '\0'; i++)
 		_putchar(str[i]);
 	return (i);
@@ -69,9 +67,9 @@ int print_hex(va_list ap)
 
 int print_hex_big(va_list ap)
 {
+	int i;
 	unsigned int num = va_arg(ap, unsigned int);
 	char *str = convert_hex(num, 16, 0);
-	int i;
 
 	for (i = 0; str[i] != '\0'; i++)
 		_putchar(str[i]);
