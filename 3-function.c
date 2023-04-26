@@ -50,9 +50,9 @@ int print_unsigned(va_list ap)
 	return (i);
 }
 /**
- *
- *
- *
+ * print_hex - print a number in hexadecimal base
+ * @ap: list of arguments
+ * Return: the number of char printed
  */
 int print_hex(va_list ap)
 {
@@ -66,6 +66,13 @@ int print_hex(va_list ap)
 		_putchar(str[i]);
 	return (i);
 }
+/**
+ * convert_hex - convert into string
+ * @num: input number
+ * @base: inpute base
+ * @l: flag if hexa value need to be lower case
+ * Return: String
+ */
 char *convert_hex(unsigned long int num, int base, int l)
 {
 	static char *rep;
