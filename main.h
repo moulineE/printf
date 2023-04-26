@@ -25,5 +25,6 @@ int _strlen(char *s);
 int printf_string(va_list ap);
 int getfunc(char *sp, va_list ap);
 int put2sp(void);
+int PrintBinary(va_list ap);
 
 #endif
