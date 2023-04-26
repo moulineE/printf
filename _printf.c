@@ -15,7 +15,7 @@ int _printf(const char *format, ...)
 	va_list ap;
 
 	va_start(ap, format);
-	if (format == NULL)
+	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 	{
 		return (-1);
 	}
@@ -25,15 +25,19 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			sp[0] = format[i + 1];
-			if ((sp[0] == '\0' || sp[0] == 32))
+			if ((sp[0] == '\0'))
 			{
 				return (-1);
 			}
 			tempr = getfunc(sp, ap);
-			if (tempr == 0 && sp[0] != 32)
+			if (tempr == 0)
 			{
 				putform(format[i], format[i + 1]);
 				r = r + 2;
+				while (format[i + 1] == 32 && format[i + 2] == 32)
+				{
+					i++;
+				}
 			}
 			else
 			{
