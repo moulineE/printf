@@ -12,7 +12,7 @@ int _putchar(char c);
  */
 int printchar(va_list ap)
 {
-	int s;
+	char s;
 
 	s = va_arg(ap, int);
 	_putchar(s);
