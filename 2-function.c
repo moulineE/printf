@@ -12,10 +12,10 @@ int _putchar(char c);
  */
 int printchar(va_list ap)
 {
-	char s;
+	unsigned char s;
 
 	s = va_arg(ap, int);
-	_putchar(s);
+	write(1, &s, 1);
 	return (1);
 }
 /**
