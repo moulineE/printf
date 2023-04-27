@@ -11,7 +11,7 @@ int print_S(va_list ap)
 	char *res;
 
 	if (str == NULL)
-		return (_puts("(null)"));
+		str = "null";
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
