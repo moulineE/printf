@@ -11,7 +11,7 @@ int print_S(va_list ap)
 	char *res;
 	
 	if (!str)
-		return(NULL);
+		return (-1);
 	for (i = 0; str[i] != '\0'; i++)
 	{
 		if (str[i] > 0 && (str[i] < 32 || str[i] >= 127))
