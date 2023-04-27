@@ -21,7 +21,7 @@ int print_S(va_list ap)
 		{
 			_puts("\\x");
 			c = c + 2;
-			res = convert_hex((unsigned long int)str[i], 16, 0);
+			res = convert_hex(str[i], 16, 0);
 			if (!res[1])
 			{
 				c++;
