@@ -34,7 +34,7 @@ int print_S(va_list ap)
 		}
 		else
 		{
-			_putchar(s[i]);
+			_putchar(str[i]);
 			c++;
 		}
 	}
