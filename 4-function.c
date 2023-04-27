@@ -12,7 +12,8 @@ int print_S(va_list ap)
 
 	if (!str)
 	{
-		str = "(null)";
+		char *a = "(null)"
+		str = a;
 		for (k = 0; str[k] != '\0', k++)
 		{
 			_putchar(str[k]);
