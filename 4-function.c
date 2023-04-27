@@ -10,7 +10,7 @@ int print_S(va_list ap)
 	char *str = va_arg(ap, char*);
 	char *res;
 
-	if (!s)
+	if (!str)
 		return (_puts("(null)"));
 	for (i = 0; str[i] != '\0'; i++)
 	{
