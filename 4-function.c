@@ -1,4 +1,9 @@
 #include"main.h"
+/**
+ * print_S - print a number in base 2
+ * @ap: va list argument
+ * Return: the number of char printed
+ */
 int print_S(va_list ap)
 {
 	int i, c = 0;
@@ -19,13 +24,13 @@ int print_S(va_list ap)
 			if (!res[1])
 			{
 				c++;
-		       		_putchar('0');
+				_putchar('0');
 			}
 			for (i = 0; str[i] != '\0'; i++)
 			{
 				_putchar(str[i]);
 				c++;
-			}	
+			}
 		}
 		else
 		{
