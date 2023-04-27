@@ -19,6 +19,7 @@ int getfunc(char *sp, va_list ap)
 	{"u", print_unsigned},
 	{"x", print_hex},
 	{"X", print_hex_big},
+	{"S", print_S},
 	{NULL, NULL},
 	};
 	int i = 0;
