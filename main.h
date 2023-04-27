@@ -34,6 +34,7 @@ char *convert_hex(unsigned long int num, int base, int l);
 int print_hex_big(va_list ap);
 int print_S(va_list ap);
 int _puts(char *str);
+int print_address(va_list ap);
 
 
 
