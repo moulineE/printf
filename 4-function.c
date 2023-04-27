@@ -10,13 +10,6 @@ int print_S(va_list ap)
 	char *str = va_arg(ap, char*);
 	char *res;
 
-	if (str == NULL)
-	{
-		str = "(null)"
-		for (e = 0; str[e] != '\0'; e++)
-			_putchar(str[i]);
-	}
-
 	for (i = 0; str[i] != '\0'; i++)
 	{
 		if (str[i] > 0 && (str[i] < 32 || str[i] >= 127))
