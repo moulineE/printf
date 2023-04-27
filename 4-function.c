@@ -6,14 +6,14 @@
  */
 int print_S(va_list ap)
 {
-	int i, c = 0;
+	int i, j, c = 0;
 	char *str = va_arg(ap, char*);
 	char *res;
 
 	if (str == NULL)
 		return (-1);
 
-	for (i = 0; str[i]; i++)
+	for (i = 0; str[i] != '\0'; i++)
 	{
 		if (str[i] > 0 && (str[i] < 32 || str[i] >= 127))
 		{
@@ -26,9 +26,9 @@ int print_S(va_list ap)
 				c++;
 				_putchar('0');
 			}
-			for (i = 0; str[i] != '\0'; i++)
+			for (j = 0; str[j] != '\0'; j++)
 			{
-				_putchar(str[i]);
+				_putchar(res[i]);
 				c++;
 			}
 		}
@@ -39,7 +39,4 @@ int print_S(va_list ap)
 		}
 	}
 	return (c);
-
-
-
 }
