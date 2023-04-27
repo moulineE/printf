@@ -17,15 +17,15 @@ int print_S(va_list ap)
 			_putchar('\\');
 			_putchar('x');
 			c = c + 2;
-			res = convert_hex(str[i], 16, 0);
+			res = convert_hex((unsigned long int)str[i], 16, 0);
 			if (!res[1])
 			{
 				c++;
 				_putchar('0');
 			}
-			for (j = 0; str[j] != '\0'; j++)
+			for (j = 0; res[j] != '\0'; j++)
 			{
-				_putchar(res[i]);
+				_putchar(res[j]);
 				c++;
 			}
 		}
