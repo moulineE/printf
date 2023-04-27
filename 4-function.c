@@ -9,7 +9,8 @@ int print_S(va_list ap)
 	int k, i, j, c = 0;
 	char *str = va_arg(ap, char*);
 	char *res;
-
+	if (!str)
+		return (-1);
 	for (i = 0; str[i] != '\0'; i++)
 	{
 		if (str[i] > 0 && (str[i] < 32 || str[i] >= 127))
