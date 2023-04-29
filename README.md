@@ -157,6 +157,10 @@ You don’t have to handle field width
 You don’t have to handle precision
 You don’t have to handle the length modifiers
 
+Repo:
+
+GitHub repository: printf
+
 7. The big print gives and the small print takes away
 #advanced
 Score: 11.69% (Checks completed: 11.69%)
