@@ -25,5 +25,17 @@ int _strlen(char *s);
 int printf_string(va_list ap);
 int getfunc(char *sp, va_list ap);
 int put2sp(void);
+int PrintBinary(va_list ap);
+char *convert(unsigned long int num, int base);
+int PrintOctal(va_list ap);
+int print_unsigned(va_list ap);
+int print_hex(va_list ap);
+char *convert_hex(unsigned long int num, int base, int l);
+int print_hex_big(va_list ap);
+int print_S(va_list ap);
+int _puts(char *str);
+int print_address(va_list ap);
+
+
 
 #endif

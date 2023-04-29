@@ -14,6 +14,13 @@ int getfunc(char *sp, va_list ap)
 	{"c", printchar},
 	{"s", printf_string},
 	{"%", put2sp},
+	{"b", PrintBinary},
+	{"o", PrintOctal},
+	{"u", print_unsigned},
+	{"x", print_hex},
+	{"X", print_hex_big},
+	{"S", print_S},
+	{"p", print_address},
 	{NULL, NULL},
 	};
 	int i = 0;
