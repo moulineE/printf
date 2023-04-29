@@ -166,6 +166,10 @@ Handle the following flag characters for non-custom conversion specifiers:
 space
 #
 
+Repo:
+
+GitHub repository: printf
+
 8. Sarcasm is lost in print
 #advanced
 Score: 0.0% (Checks completed: 0.0%)
@@ -174,6 +178,10 @@ Handle the following length modifiers for non-custom conversion specifiers:
 l
 h
 Conversion specifiers to handle: d, i, u, o, x, X
+
+Repo:
+
+GitHub repository: printf
 
 9. Print some money and give it to us for the rain forests
 #advanced
