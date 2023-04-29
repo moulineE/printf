@@ -10,25 +10,28 @@ int putform(char a, char b);
  */
 int _printf(const char *format, ...)
 {
-	int i = 0, f, tempr, r = 0;
+	int i = 0, tempr, r = 0;
 	char sp[2] = {'\0', '\0'};
 	va_list ap;
 
+	fflush(stdout);
 	va_start(ap, format);
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
+	{
+		return (-1);
+	}
+	if (format[0] == '%' && format[1] == ' ' && !format[2])
 	{
 		return (-1);
 	}
 	while (format[i] != '\0')
 	{
 		tempr = 0;
-		f = 0;
 		if (format[i] == '%')
 		{
 			while (format[i + 1] == 32 && format[i] != '\0')
 			{
 				i++;
-				f++;
 			}
 			sp[0] = format[i + 1];
 			if ((sp[0] == '\0'))
