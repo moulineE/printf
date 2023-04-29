@@ -207,12 +207,20 @@ GitHub repository: printf
 Score: 0.0% (Checks completed: 0.0%)
 Handle the - flag character for non-custom conversion specifiers.
 
+Repo:
+
+GitHub repository: printf
+
 13. Print is the sharpest and the strongest weapon of our party
 #advanced
 Score: 0.0% (Checks completed: 0.0%)
 Handle the following custom conversion specifier:
 
 r : prints the reversed string
+
+Repo:
+
+GitHub repository: printf
 
 14. The flood of print has turned reading into a process of gulping rather than savoring
 #advanced
